@@ -1,3 +1,3 @@
 module.exports = {
-    FlightMiddlewares: require('./flight-middlewares');
+    FlightMiddlewares: require('./flight-middlewares')
 }

@@ -13,7 +13,7 @@ class CityRepository {
         }
     }
 
-    async deleteCity({ cityId }) {
+    async deleteCity( cityId ) {
         try {
             await City.destroy({
                 where: {
@@ -35,7 +35,7 @@ class CityRepository {
             //     where: {
             //         id: cityId
             //     },
-            //      
+                 
             // });
             // for getting updated data in mysql we use the below approach
             const city = await City.findByPk(cityId);

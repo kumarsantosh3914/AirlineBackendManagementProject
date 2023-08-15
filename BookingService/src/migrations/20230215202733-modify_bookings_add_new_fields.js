@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -9,24 +9,16 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    await queryInterface.addColumn(
-      'Bookings',
-      'noOfSeates',
-      {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        defaultValue: 1
-      }
-    );
-    await queryInterface.addColumn(
-      'Bookings',
-      'totalCost',
-      {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        defaultValue: 0
-      }
-    )
+    await queryInterface.addColumn("Bookings", "noOfSeats", {
+      type: Sequelize.INTEGER,
+      allowNull: false,
+      defaultValue: 1,
+    });
+    await queryInterface.addColumn("Bookings", "totalCost", {
+      type: Sequelize.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    });
   },
 
   async down(queryInterface, Sequelize) {
@@ -36,7 +28,7 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    await queryInterface.removeColumn('Bookings', "noOfSeats");
-    await queryInterface.removeColumn('Bookings', 'totalCost');
-  }
+    await queryInterface.removeColumn("Bookings", "noOfSeats");
+    await queryInterface.removeColumn("Bookings", "totalCost");
+  },
 };
