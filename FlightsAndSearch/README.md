@@ -139,6 +139,113 @@
   }
   ```
 
+- Create flight: localhost:3001/api/v1/flights - POST
+  
+  - Success response object:
+
+  ```
+  {
+    "data": {
+        "id": 4,
+        "flightNumber": "BA170",
+        "airplaneId": "3",
+        "departureAirportId": "1",
+        "arrivalAirportId": "6",
+        "arrivalTime": "2024-01-26T11:00:00.000Z",
+        "departureTime": "2024-01-26T08:00:00.000Z",
+        "price": "6500",
+        "totalSeats": 400,
+        "updatedAt": "2023-11-21T21:30:04.459Z",
+        "createdAt": "2023-11-21T21:30:04.459Z"
+    },
+    "success": true,
+    "err": {},
+    "message": "Successfully created a flight"
+  }
+  ```
+
+- Get flight by id: localhost:3001/api/v1/flights/2 - GET
+
+  - Success response object:
+
+  ```
+  {
+    "data": {
+        "id": 2,
+        "flightNumber": "Uk 820",
+        "airplaneId": 4,
+        "departureAirportId": 1,
+        "arrivalAirportId": 4,
+        "arrivalTime": "2023-01-26T11:00:00.000Z",
+        "departureTime": "2023-01-26T08:00:00.000Z",
+        "price": 4500,
+        "boardingGate": null,
+        "totalSeats": 320,
+        "createdAt": "2023-02-12T22:20:27.000Z",
+        "updatedAt": "2023-02-12T22:20:27.000Z"
+    },
+    "success": true,
+    "err": {},
+    "message": "Successfully fetched the flight"
+  }
+  ```
+
+- Get all flight: localhost:3001/api/v1/flights - GET
+
+  - Success response object:
+
+  ```
+  {
+    "data": [
+        {
+            "id": 2,
+            "flightNumber": "Uk 820",
+            "airplaneId": 4,
+            "departureAirportId": 1,
+            "arrivalAirportId": 4,
+            "arrivalTime": "2023-01-26T11:00:00.000Z",
+            "departureTime": "2023-01-26T08:00:00.000Z",
+            "price": 4500,
+            "boardingGate": null,
+            "totalSeats": 320,
+            "createdAt": "2023-02-12T22:20:27.000Z",
+            "updatedAt": "2023-02-12T22:20:27.000Z"
+        },
+        {
+            "id": 3,
+            "flightNumber": "Uk 816",
+            "airplaneId": 4,
+            "departureAirportId": 1,
+            "arrivalAirportId": 4,
+            "arrivalTime": "2023-01-16T16:00:00.000Z",
+            "departureTime": "2023-01-16T13:00:00.000Z",
+            "price": 5000,
+            "boardingGate": null,
+            "totalSeats": 319,
+            "createdAt": "2023-02-12T22:38:53.000Z",
+            "updatedAt": "2023-08-15T13:20:27.000Z"
+        }
+    ],
+    "success": true,
+    "err": {},
+    "message": "Successfully fetched the flight"
+  }
+  ```
+
+
+- Update flight by id: localhost:3001/api/v1/flights/2 - PATCH
+
+  - Success response object:
+
+  ```
+  {
+    "data": true,
+    "success": true,
+    "err": {},
+    "message": "Successfully update the flight"
+  }
+  ```
+
 
 
 ## Project Setup
